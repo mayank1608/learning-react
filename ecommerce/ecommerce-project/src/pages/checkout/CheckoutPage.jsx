@@ -4,6 +4,7 @@ import { OrderSummary } from './OrderSummary';
 import { PaymentSummary } from './PaymentSummary';
 import './checkout-header.css';
 import './CheckoutPage.css';
+import { Link, Navigate } from 'react-router';
 
 export function CheckoutPage({ cart, loadCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
@@ -36,9 +37,11 @@ export function CheckoutPage({ cart, loadCart }) {
             </a>
           </div>
 
+          {!cart.length && <Navigate to="/" />}
+
           <div className="checkout-header-middle-section">
-            Checkout (<a className="return-to-home-link"
-              href="/">3 items</a>)
+            Checkout (<Link className="return-to-home-link"
+              to="/">{cart.length} items</Link>)
           </div>
 
           <div className="checkout-header-right-section">
