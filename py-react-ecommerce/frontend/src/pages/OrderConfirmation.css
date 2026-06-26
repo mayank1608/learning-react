@@ -1,0 +1,51 @@
+.confirmation-page { min-height: 100vh; background: #f5f5f5; }
+.conf-navbar { display: flex; padding: 1rem 2rem; background: #2E2E38; }
+.conf-logo { font-size: 1.5rem; font-weight: 700; color: #FFE600; text-decoration: none; }
+
+.conf-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+
+.conf-success { text-align: center; margin-bottom: 2rem; }
+.success-icon {
+  width: 80px; height: 80px; border-radius: 50%; background: #dcfce7;
+  color: #16a34a; font-size: 2.5rem; display: inline-flex; align-items: center;
+  justify-content: center; margin-bottom: 1rem;
+}
+.conf-success h1 { color: #2E2E38; margin-bottom: 0.5rem; }
+.conf-order-id { color: #888; font-size: 1.1rem; }
+
+.conf-details { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
+.conf-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.conf-card h3 { color: #2E2E38; margin-bottom: 1rem; }
+
+.conf-items { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
+.conf-item { display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; }
+.conf-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 6px; }
+.conf-item-name { font-weight: 500; font-size: 0.9rem; }
+.conf-item-qty { font-size: 0.8rem; color: #888; }
+.conf-item-price { margin-left: auto; font-weight: 600; }
+
+.conf-totals { border-top: 1px solid #eee; padding-top: 0.75rem; }
+.conf-row { display: flex; justify-content: space-between; padding: 0.4rem 0; font-size: 0.9rem; color: #555; }
+.conf-row.discount { color: #16a34a; }
+.conf-row.total { border-top: 2px solid #eee; margin-top: 0.5rem; padding-top: 0.75rem; font-weight: 700; color: #2E2E38; }
+
+.conf-delivery-date, .conf-payment, .conf-status { margin: 0.5rem 0; font-size: 0.9rem; color: #555; }
+.status-badge {
+  display: inline-block; background: #dbeafe; color: #1d4ed8;
+  padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem; text-transform: capitalize;
+}
+
+.conf-actions { display: flex; justify-content: center; gap: 1rem; }
+.btn-view-orders {
+  background: #2E2E38; color: white; padding: 0.75rem 2rem; border-radius: 8px;
+  text-decoration: none; font-weight: 600;
+}
+.btn-continue-shopping {
+  background: #FFE600; color: #2E2E38; padding: 0.75rem 2rem; border-radius: 8px;
+  text-decoration: none; font-weight: 600;
+}
+
+.loading-container { display: flex; justify-content: center; align-items: center; min-height: 60vh; }
+.spinner { width: 40px; height: 40px; border: 4px solid #e5e5e5; border-top-color: #2E2E38; border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-container { text-align: center; padding: 4rem; }
