@@ -86,11 +86,11 @@ const UsersList = ({ searchKey, socket }: any) => {
 
   useEffect(() => {
     socket.off('set-msg-count').on('set-msg-count', (message: IMessage) => {
-      const allChats = store.getState().userReducer.allChats as IChat[] | null;
       const selectedChat = store.getState().userReducer.selectedChat as IChat | null;
+      let allChats = store.getState().userReducer.allChats as IChat[] | null;
 
       if (selectedChat?._id !== message.chatId) {
-        const updatedChats = allChats?.map((chat: IChat) => {
+        const updatedChats: any = allChats?.map((chat: IChat) => {
           if (chat._id === message.chatId) {
             return {
               ...chat,
@@ -99,7 +99,22 @@ const UsersList = ({ searchKey, socket }: any) => {
             }
           }
           return chat
-        })
+        });
+        allChats = updatedChats
+      }
+
+      const latestChat = (allChats as IChat[]).find(
+        (chat: IChat) => chat._id === message.chatId
+      );
+
+      if (latestChat) {
+        const updatedChats = [
+          latestChat,
+          ...(allChats as IChat[]).filter(
+            (chat: IChat) => chat._id !== latestChat._id
+          ),
+        ];
+
         dispatch(setAllChats(updatedChats));
       }
     })
