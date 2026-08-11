@@ -1,0 +1,71 @@
+{
+	"folders": [
+		{
+			"path": "../../Project1"
+		},
+		{
+			"path": "../../myproject1"
+		},
+		{
+			"path": "../../TextUtils-React-master"
+		},
+		{
+			"path": "../../Project2"
+		},
+		{
+			"path": "../../Project3"
+		},
+		{
+			"path": "../../Project4"
+		},
+		{
+			"path": "../../Project5"
+		},
+		{
+			"path": "../../Project0"
+		},
+		{
+			"path": "../../GITHUB projects/react-hooks-master"
+		},
+		{
+			"path": "../../Project6"
+		},
+		{
+			"path": "../../Project7"
+		},
+		{
+			"path": "../../Project8"
+		},
+		{
+			"path": "../../nested-routes-react-router-dom-v6-main"
+		},
+		{
+			"path": "../../AxiosProject"
+		},
+		{
+			"path": "../../react_full_stack_axios-master"
+		},
+		{
+			"path": "../../RoutingProject"
+		},
+		{
+			"path": "../../DemoRouting"
+		},
+		{
+			"path": "../../DemoAxios"
+		},
+		{
+			"path": "../../DemoAxios1"
+		},
+		{
+			"path": "../../formik_forms_starter-master"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../DemoAxios2"
+		}
+	],
+	"settings": {}
+}
